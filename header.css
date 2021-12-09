@@ -1,7 +1,8 @@
-header{
-  background: lightblue;
-  display: flex;
+header {
+    background-color: #55d6aa;
+    display: flex;
 }
+
 header .container {
     margin: 0 auto;
     width: 85%;
@@ -11,4 +12,29 @@ header .container {
     height: 6rem;
 
 }
+
+header a {
+    color: #444;
+    text-decoration: none;
+}
+
+header .logo {
+    font-size: 2rem;
+
+
+}
+
+header nav ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    font-size: 1.8rem;
+    gap: 2rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
 
