@@ -1,0 +1,23 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+
+}
+body {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1280px;
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
