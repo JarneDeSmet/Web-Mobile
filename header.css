@@ -19,7 +19,7 @@ header a {
 }
 
 header .logo {
-  width: 50px;
+  max-width: 1.6rem;
 
 
 }
