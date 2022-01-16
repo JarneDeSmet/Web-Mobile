@@ -1,6 +1,9 @@
 header {
-    background-color: #0092F2 ;
+    background-color: #303133 ;
     display: flex;
+
+   font-size: 1.9rem;
+
 }
 
 header .container {
@@ -14,8 +17,9 @@ header .container {
 }
 
 header a {
-    color: #444;
+    color: #ffaa00;
     text-decoration: none;
+    margin: 2rem;
 }
 
 header .logo {
@@ -32,7 +36,9 @@ header nav ul {
     gap: 2rem;
 }
 
+
 header nav a:hover {
-    text-decoration: underline;
-    color: #000;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px #ffffff;
+    filter: dropshadow(color=#ffffff, offx=2, offy=2);
 }

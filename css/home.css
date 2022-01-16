@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#aanbod {
+    border: #000000 solid;
+    max-width: 85%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #303133;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    color: #f2ffff;
+    background-color: #000000;
+    padding: 2px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.banner {
+    text-align: center;
+
+}
+
+.bannersmall {
+    margin: 0 auto;
+    padding: 30px 2px;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+    width: 80rem;
+    line-height: 1.3rem;
+}
+
+
+
+.bannersmall h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 450;
+}
+
+.bannersmall h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#section1 {
+    height: 100vh;
+    background-image: url("../Black-Angus.jpg");
+    background-position: top;
+    padding: 20rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+
+}
+
+.section2 {
+    margin: 0 auto;
+    padding: 70px 0 62px;
+    background-image: url("../section2.jpg");
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+
+}
+
+.sec2 {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rem;
+    margin-bottom: 7rem;
+    background: rgba(255, 255, 255, .7);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 60rem;
+    line-height: 1.6rem;
+}
+
+.sec2 > a {
+    margin-left: 10rem;
+    margin-top: 2rem;
+    font-size: 1.9rem;
+}
+
+.section3 {
+    margin: 0 auto;
+    padding: 70px 0 62px;
+    background-image: url("../section3.jpg");
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+
+}
+
+iframe {
+    align-self: center;
+    width: 50rem;
+    height: 50rem;
+}
+
+#video {
+    background: rgba(255, 255, 255, .7);
+    margin-left: 20rem;
+    width: 21rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
