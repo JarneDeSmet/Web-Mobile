@@ -1,0 +1,15 @@
+.loginform {
+    width: 20%;
+    height: fit-content;
+    border: 2px solid grey;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passworddiv {
+    margin-top: 10px;
+}
