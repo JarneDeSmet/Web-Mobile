@@ -26,7 +26,7 @@ body {
     background: rgba(255, 255, 255, .7);
     border-radius: 10px;
     max-width: 80rem;
-    line-height: 1.3rem;
+    line-height: 4rem;
 }
 
 
@@ -37,7 +37,7 @@ body {
 }
 
 .bannersmall h1 {
-    font-size: 40px;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-justify-content: center;
+    justify-content: center;
 
 }
 
@@ -69,7 +69,8 @@ justify-content: center;
     background: rgba(255, 255, 255, .7);
     padding: 2rem;
     border-radius: 10px;
-    width: 60rem;
+    width: 100%;
+    max-width: 55rem;
     line-height: 1.6rem;
 }
 
@@ -87,13 +88,13 @@ justify-content: center;
     background-position: center right;
     display: flex;
     flex-direction: column;
-
+    height: 70rem;
 }
 
 iframe {
     align-self: center;
-    width: 50rem;
-    height: 50rem;
+    width: 80%;
+    height: 100%;
 }
 
 #video {
