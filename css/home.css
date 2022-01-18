@@ -18,6 +18,7 @@ body {
 
 .banner {
     text-align: center;
+    margin-top: -30rem;
 }
 
 .bannersmall {
@@ -26,12 +27,12 @@ body {
     background: rgba(255, 255, 255, .7);
     border-radius: 10px;
     max-width: 80rem;
-    line-height: 4rem;
+    line-height: 1.5rem;
 }
 
 
 .bannersmall h2 {
-    font-size: 36px;
+    font-size: 3.4rem;
     text-transform: uppercase;
     font-weight: 450;
 }
@@ -93,7 +94,8 @@ body {
 
 iframe {
     align-self: center;
-    width: 80%;
+
+    width: 40%;
     height: 100%;
 }
 
