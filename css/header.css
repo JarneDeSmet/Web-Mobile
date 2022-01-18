@@ -33,6 +33,7 @@ header nav ul {
     list-style: none;
     font-size: 1.8rem;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 
