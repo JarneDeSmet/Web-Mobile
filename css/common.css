@@ -126,21 +126,14 @@ footer {
     max-width: fit-content;
 }
 
-.button:hover {
+.button:hover, .sec2:hover .button, .banner:hover .button{
     color: #303133;
     background-color: #ffaa00;
     border: 2px solid #303133;
 }
 
-.banner:hover .button {
-    animation-duration: 450ms;
-    animation-name: animate-fade;
-    animation-fill-mode: backwards;
-    opacity: 1;
-}
-
-.sec2:hover .button {
-    animation-duration: 450ms;
+.banner:hover .button, .sec2:hover .button, .button:hover {
+    animation-duration: 400ms;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
     opacity: 1;
@@ -148,21 +141,22 @@ footer {
 
 @keyframes animate-fade {
     0% {
-        opacity: 0;
+        background-color: #303133;
+        border-color: #ffaa00;
+        color: #ffaa00;
     }
     100% {
-        opacity: 1;
+        background-color: #ffaa00;
+        border-color: #111111;
+        color: #111111;
     }
 }
+
 
 .current {
     color: #ffffff;
     text-decoration: 1px underline;
 }
-
-
-
-
 
 
 .roll {
@@ -215,6 +209,14 @@ footer {
 
     -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
     -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
+
+.thankYou {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 
