@@ -18,14 +18,14 @@
         <nav>
             <ul>
                 <li>
-                    <a href="../">Home</a>
+                    <a class="navlink" href="../../">Home</a>
                 </li>
-                <li><a class="current" href="../../producten">Producten</a></li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
                 <li>
-                    <a href="../../about">Over ons</a>
+                    <a class="navlink" href="../../about">Over ons</a>
                 </li>
                 <li>
-                    <a href="../../contact">Contact</a>
+                    <a class="navlink" href="../../contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -64,8 +64,13 @@
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
-                src="../../images/footer/facebook.png" alt="facebook logo"></a>
+        <div id="socials">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
+                    src="../../images/footer/facebook.png" alt="facebook logo"></a>
+            <a href="https://twitter.com/"> <img src="../../images/footer/twitter.png" alt="twitter logo"></a>
+            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo">
+            </a>
+        </div>
         Gebroeders de Smetstraat 1, 9000 Gent
     </div>
 
@@ -93,6 +98,29 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify(selector) {
+        if (supports3DTransforms) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for (; i < len; i++) {
+                let node = nodes[i];
+
+                if (!node.className || !node.className.match(/roll/g)) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify('.navlink');
 </script>
 </body>
 </html>
