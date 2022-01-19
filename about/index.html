@@ -23,7 +23,7 @@
                 <li><a class="navlink" href="../producten">Producten</a>
                 </li>
                 <li>
-                    <a  class="current navlink" href="../about">Over ons</a>
+                    <a class="current navlink" href="../about">Over ons</a>
                 </li>
                 <li>
                     <a class="navlink" href="../contact">Contact</a>
@@ -39,8 +39,8 @@
                 <div class="eenheid">
                     <h1>Over ons</h1>
                 </div>
-                <div class="svg eenheid">
-                    <img src="../images/about/worstenfest.svg" alt="worstjes">
+                <div class="eenheid">
+                    <img class="svg" src="../images/about/worstenfest.svg" alt="worstjes">
                 </div>
             </section>
             <p>Wij zijn een opstartend bedrijf met een passie voor vlees. Haat naar vegetariërs hebben we zeker niet,
@@ -123,24 +123,24 @@
     let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
         document.body.style['MozPerspective'] !== undefined;
 
-    function linkify( selector ) {
-        if( supports3DTransforms ) {
+    function linkify(selector) {
+        if (supports3DTransforms) {
 
             let nodes = document.querySelectorAll(selector);
 
             let i = 0, len = nodes.length;
-            for(; i < len; i++ ) {
+            for (; i < len; i++) {
                 let node = nodes[i];
 
-                if( !node.className || !node.className.match( /roll/g ) ) {
+                if (!node.className || !node.className.match(/roll/g)) {
                     node.className += ' roll';
-                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
                 }
             }
         }
     }
 
-    linkify( '.navlink' );
+    linkify('.navlink');
 </script>
 </body>
 </html>

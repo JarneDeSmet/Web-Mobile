@@ -96,10 +96,10 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
-    align-items: left;
+    align-items: flex-start;
 }
 .eenheid{
     flex: 0 0 18%;
-    position: left;
+    position: center;
     align-items: flex-start;
 }
