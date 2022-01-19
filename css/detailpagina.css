@@ -1,6 +1,13 @@
 main{
     margin: 1.5rem;
 }
+html{
+    background-image: url("../img/producten/product_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
 .titel {
 
     margin-bottom: 1.5rem;
@@ -8,12 +15,12 @@ main{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    background-color: #303133;
+    background: rgba(255, 255, 255, .8);
     border: black solid 1px;
 }
 
 .titel h1 {
-    color: #ffaa00;
+    color: #000000;
 }
 
 .product {
@@ -24,16 +31,15 @@ main{
 
 .card {
     max-width: 50%;
-    background-color: #303133;
+    background: rgba(255, 255, 255, .8);
     border-radius: 10px;
     border: black solid 1px;
     padding: 2rem;
-    box-shadow: 5px 5px 10px 3px #515151;
+    box-shadow: 5px 5px 10px 3px #000000;
 }
 
 .card h2{
     font-size: 1.6rem;
-    color: #ffffff;
     text-shadow: 2px 2px 1px #CE5937;
 }
 .tekst {
