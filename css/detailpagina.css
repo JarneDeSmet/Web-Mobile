@@ -1,8 +1,6 @@
-main{
-    margin: 1.5rem;
-}
+
 html{
-    background-image: url("../img/producten/product_background.jpg");
+    background-image: url("../images/producten/product_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

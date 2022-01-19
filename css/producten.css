@@ -41,7 +41,6 @@
     color: #ffaa00;
 }
 .titel {
-    margin-top: 2rem;
     max-width: 80%;
     border-radius: 10px;
     display: flex;
@@ -59,9 +58,4 @@ html{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
-
-.productimage{
-display: flex;
-    height: 100%;
 }
