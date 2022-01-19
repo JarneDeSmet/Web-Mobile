@@ -56,6 +56,9 @@ footer {
 .ten {
     width: 83.33%;
 }
+.svg {
+    width: 5rem;
+}
 
 #myBtn {
     display: none;
