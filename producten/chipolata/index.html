@@ -94,5 +94,28 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
+</script>
 </body>
 </html>
