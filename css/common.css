@@ -67,7 +67,10 @@ footer {
 }
 
 .svg {
-    width: 5rem;
+    width: 4rem;
+    animation-name: top;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
 #myBtn {
