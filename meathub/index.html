@@ -18,10 +18,10 @@
 
             <nav id="menu" class="horizontaal">
                 <ul>
-                    <li><a class="navlink roll" href="../"><span data-titel="Home">Home</span></a></li>
-                    <li><a class="navlink roll" href="../producten/"><span data-titel="Home">Producten</span></a></li>
-                    <li><a class="current navlink roll" href="../about/"><span data-titel="Home">Over ons</span></a></li>
-                    <li><a class="navlink roll" href="../contact/"><span data-titel="Home">Contact</span></a></li>
+                    <li><a class="navlink " href="../"><span data-titel="Home">Home</span></a></li>
+                    <li><a class="navlink " href="../producten/"><span data-titel="Home">Producten</span></a></li>
+                    <li><a class=" navlink " href="../about/"><span data-titel="Home">Over ons</span></a></li>
+                    <li><a class="navlink " href="../contact/"><span data-titel="Home">Contact</span></a></li>
                 </ul>
             </nav>
 
@@ -31,7 +31,7 @@
 			</div>
         </div>
     </header>
-<main class="container" , class="center">
+<main class="container center">
     <h1>Lekkere recepten met vlees</h1>
     <section class="lijst">
         <div class="video">
@@ -41,10 +41,10 @@
             <iframe class="filmpje" src="https://www.youtube.com/embed/L0FHOLPJYs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video">
-            <iframe class="filmpje" src="https://www.youtube.com/embed/s1175wukH3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+            <iframe class="filmpje" src="https://www.youtube.com/embed/s1175wukH3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video">
-            <iframe class="filmpje" src="https://www.youtube.com/embed/4oLnJiYN_GE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+            <iframe class="filmpje" src="https://www.youtube.com/embed/4oLnJiYN_GE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video">
             <iframe class="filmpje" src="https://www.youtube.com/embed/uNT_AxXrUGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -121,7 +121,29 @@
     }
 
 </script>
+    <script>
+        let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+            document.body.style['MozPerspective'] !== undefined;
 
+        function linkify( selector ) {
+            if( supports3DTransforms ) {
+
+                let nodes = document.querySelectorAll(selector);
+
+                let i = 0, len = nodes.length;
+                for(; i < len; i++ ) {
+                    let node = nodes[i];
+
+                    if( !node.className || !node.className.match( /roll/g ) ) {
+                        node.className += ' roll';
+                        node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                    }
+                }
+            }
+        }
+
+        linkify( '.navlink' );
+    </script>
 </body>
 <script type="text/javascript" src="../js/site.js"></script>
 </html>
