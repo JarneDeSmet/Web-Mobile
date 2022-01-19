@@ -136,7 +136,6 @@ footer {
     animation-duration: 400ms;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
-    opacity: 1;
 }
 
 @keyframes animate-fade {

@@ -77,21 +77,6 @@ hr {
     max-width: 50rem;
 }
 
-.buttonabus {
-    color: #ffaa00;
-    background-color: #303133;
-    text-decoration: none;
-    padding: 1rem;
-    border: 2px solid #ffaa00;
-    border-radius: 10px;
-    max-width: fit-content;
-}
-
-.buttonabus:hover {
-    color: #303133;
-    background-color: #ffaa00;
-    border: 2px solid #303133;
-}
 .lijst{
     display: flex;
     flex-wrap: wrap;
