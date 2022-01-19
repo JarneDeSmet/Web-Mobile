@@ -1,13 +1,15 @@
-main{
+main {
     margin: 1.5rem;
 }
-html{
-    background-image: url("../img/producten/product_background.jpg");
+
+html {
+    background-image: url("../images/producten/product_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
+
 .titel {
 
     margin-bottom: 1.5rem;
@@ -38,10 +40,11 @@ html{
     box-shadow: 5px 5px 10px 3px #000000;
 }
 
-.card h2{
+.card h2 {
     font-size: 1.6rem;
     text-shadow: 2px 2px 1px #CE5937;
 }
+
 .tekst {
     display: flex;
     justify-content: space-evenly;
