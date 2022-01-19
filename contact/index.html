@@ -16,15 +16,15 @@
         <nav>
             <ul>
                 <li>
-                    <a href="../">Home</a>
+                    <a class="navlink" href="../">Home</a>
                 </li>
-                <li><a href="../producten">Producten</a>
-                </li>
-                <li>
-                    <a href="../about">Over ons</a>
+                <li><a class="navlink" href="../producten">Producten</a>
                 </li>
                 <li>
-                    <a class="current" href="../contact">Contact</a>
+                    <a  class=" navlink" href="../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink current" href="../contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -69,6 +69,29 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
 </script>
 </body>
 </html>

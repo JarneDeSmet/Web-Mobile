@@ -13,19 +13,19 @@
 <body>
 <header>
     <div class="container">
-        <a href="../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
+        <a href="../../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
 
         <nav>
             <ul>
                 <li>
-                    <a href="../">Home</a>
+                    <a class="navlink" href="../../">Home</a>
                 </li>
-                <li><a class="current" href="../../producten">Producten</a></li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
                 <li>
-                    <a href="../../about">Over ons</a>
+                    <a class="navlink" href="../../about">Over ons</a>
                 </li>
                 <li>
-                    <a href="../../contact">Contact</a>
+                    <a class="navlink" href="../../contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -52,20 +52,39 @@
         </div>
         <div class="prijzen card">
             <h2>Prijzen</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur debitis deserunt dolore
-                dolorem dolores est et, fugit iste laudantium, nam necessitatibus nisi nobis odio placeat praesentium
-                quas suscipit totam?</p>
-        </div>
-        <div class="img card">
-            <img src="../../images/producten/chipolata.png" alt="Chipolata">
+            <ul>
+                <li>
+                    <a class="button" href="https://www.aldi.be/nl/producten/assortiment/vlees/rundsvlees/chipolata-varken-kalf-1211-1-0.article.html">
+                        Aldi: €9.38 per Kg
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="https://www.collectandgo.be/colruyt/nl/assortiment/bereid-vlees?rootCategoryId=20002&&s_kwcid=AL!6321!3!528861368286!p!!g!!chipolata%20kopen&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc00_qtF7FjGfrOJVkQt7mEdx3ZnxGDHjfSRtAnXHsGJxUuNr22Y1Y8aAsGAEALw_wcB&gclsrc=aw.ds#pdp_3074457345616743723">
+                        Collect and Go: €7.11
+                    </a>
+                </li>
+                <li><a class="button" href="https://www.renmans.be/nl/producten/gehakt-worsten/worsten/chipolata-varken#top">
+                    Renmans: €12.98 per Kg
+                </a>
+                </li>
+                <li>
+                    <a class="button" href="https://drive.carrefour.be/nl/Beenhouwerij/Bereidingen-vlees-%26-gevogelte/Worsten-%26-pensen/Carrefour-Chipolata-Varken-Kalf-0-210-kg/p/01617356?redirectdoteu=x&">
+                        Carrefour: €11 per Kg
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 </main>
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
-                src="../../images/footer/facebook.png" alt="facebook logo"></a>
+        <div id="socials">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
+                    src="../../images/footer/facebook.png" alt="facebook logo"></a>
+            <a href="https://twitter.com/"> <img src="../../images/footer/twitter.png" alt="twitter logo"></a>
+            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo"> </a>
+        </div>
         Gebroeders de Smetstraat 1, 9000 Gent
     </div>
 
@@ -93,6 +112,29 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
 </script>
 </body>
 </html>

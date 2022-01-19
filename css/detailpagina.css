@@ -43,6 +43,8 @@ html {
 .card h2 {
     font-size: 1.6rem;
     text-shadow: 2px 2px 1px #CE5937;
+    margin: 0;
+    padding-bottom: 1rem;
 }
 
 .tekst {
@@ -54,4 +56,19 @@ html {
 
 .card img {
     width: 100%;
+}
+
+.prijzen ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 0;
+
+}
+.prijzen li:hover {
+    transform: scale(1.1);
+}
+.prijzen li{
+    transition: transform 0.4s;
 }

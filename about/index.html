@@ -18,15 +18,15 @@
         <nav>
             <ul>
                 <li>
-                    <a href="../">Home</a>
+                    <a class="navlink" href="../">Home</a>
                 </li>
-                <li><a href="../producten">Producten</a>
-                </li>
-                <li>
-                    <a class="current" href="../about">Over ons</a>
+                <li><a class="navlink" href="../producten">Producten</a>
                 </li>
                 <li>
-                    <a href="../contact">Contact</a>
+                    <a class="current navlink" href="../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="../contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -39,8 +39,8 @@
                 <div class="eenheid">
                     <h1>Over ons</h1>
                 </div>
-                <div class="svg", class="eenheid">
-                    <img src="../images/about/worstenfest.svg"alt="worstjes">
+                <div class="eenheid">
+                    <img class="svg" src="../images/about/worstenfest.svg" alt="worstjes">
                 </div>
             </section>
             <p>Wij zijn een opstartend bedrijf met een passie voor vlees. Haat naar vegetariërs hebben we zeker niet,
@@ -119,6 +119,28 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
 
+    function linkify(selector) {
+        if (supports3DTransforms) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for (; i < len; i++) {
+                let node = nodes[i];
+
+                if (!node.className || !node.className.match(/roll/g)) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify('.navlink');
+</script>
 </body>
 </html>

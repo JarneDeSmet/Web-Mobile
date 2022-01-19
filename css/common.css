@@ -67,7 +67,7 @@ footer {
 }
 
 .svg {
-    width: 4rem;
+    width: 5rem;
     animation-name: top;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -100,10 +100,10 @@ footer {
         transform: rotate(0deg);
     }
     85% {
-        transform: rotate(7deg);
+        transform: rotate(8deg);
     }
     95% {
-        transform: rotate(-7deg);
+        transform: rotate(-8deg);
     }
     100% {
         transform: rotate(0deg);
@@ -124,7 +124,6 @@ footer {
     border: 2px solid #ffaa00;
     border-radius: 10px;
     max-width: fit-content;
-    opacity: 0;
 }
 
 .button:hover {
@@ -158,6 +157,65 @@ footer {
 
 .current {
     color: #ffffff;
-    text-shadow: 2px 2px 10px #ffffff;
+    text-decoration: 1px underline;
 }
+
+
+
+
+
+
+.roll {
+    display: inline-block;
+    overflow: hidden;
+
+    vertical-align: top;
+
+    -webkit-perspective: 400px;
+    -moz-perspective: 400px;
+
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+}
+.roll span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
+
+    -webkit-transition: all 400ms ease;
+    -moz-transition: all 400ms ease;
+
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+.roll:hover span {
+    background: #111;
+
+    -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+}
+.roll span:after {
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 2px;
+
+    color: #303133;
+    background-color: #ffaa00;
+    border-radius: 7px;
+
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+
+    -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+    -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
+
+
 

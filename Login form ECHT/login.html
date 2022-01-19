@@ -1,23 +1,63 @@
 <html>
     <head>
-        <title>Login Page</title>
         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=yes, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login pagina</title>
+
       </head>
     <body>
+        <header>
+            <div class="container">
+                <a href="./"><img src="logo.png" alt="logo van OdiseeEats" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="current" href="./">Home</a>
+                        </li>
+                        <li>
+                            <a href="../contact/index.html">Contact</a>
+                        </li>
+                        <li>
+                            <a href="../about/index.html">Over ons</a>
+                        </li>
+                        <li><a href="../producten/index.html">Producten</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <div class="content">
             <div class="loginform">
-                <h3 class="title">Login</h1>
-                    <div class="namediv">
-                        <label> Name:</label>
-                        <input type="text" class="name" id="name" name="name" placeholder="name">
-                    </div>
+                </h1> Login</h1>
+
                 <div class="passworddiv">
-                    <label> Password:</label>
-                    <input type="password" class="password" id="password" name="password" placeholder="password">
+                    <label> Wachtwoord:</label>
+                    <input type="password" class="password" id="password" name="password" placeholder="Dit is een geheim">
                 </div>
                 <button class="submit">login</button>
             </div>
         </div>
+        <footer>
+            <div class="container">
+                &copy; Copyright 2021, OdiseeEats
+                <div id="socials">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
+                            src="../images/footer/facebook.png" alt="facebook logo"></a>
+                    <a href="https://twitter.com/"> <img src="../images/footer/twitter.png" alt="twitter logo"></a>
+                    <a href="https://www.instagram.com/"> <img src="../images/footer/instagram.png" alt="instagram logo"> </a>
+                </div>
+                Gebroeders de Smetstraat 1, 9000 Gent
+            </div>
+
+        </footer>
+
 
 
         <script src="js/login.js"></script>
