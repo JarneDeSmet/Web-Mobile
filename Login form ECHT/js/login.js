@@ -1,5 +1,5 @@
 document.querySelector('.submit').addEventListener("click", function() {
-    if (document.querySelector('.name').value === 'adam' && document.querySelector('.password').value === 'roelandt') {
+    if ( document.querySelector('.password').value === 'Veggiesucks') {
         location.href = 'index.html';
     }
     else {
