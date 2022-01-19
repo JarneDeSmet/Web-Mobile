@@ -124,7 +124,6 @@ footer {
     border: 2px solid #ffaa00;
     border-radius: 10px;
     max-width: fit-content;
-    opacity: 0;
 }
 
 .button:hover {
