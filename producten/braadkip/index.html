@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Braadkip</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/detailpagina.css">
 </head>
+
 <body>
-hier komt nog iets
+<header>
+    <div class="container">
+        <a href="../../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navlink" href="../../">Home</a>
+                </li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
+                <li>
+                    <a class="navlink" href="../../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="../../contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="titel container">
+        <h1>Braakip</h1>
+    </section>
+    <section class="product container">
+        <div class="tekst">
+            <div class="img card">
+                <img src="../../images/producten/kip.png" alt="Gebraden kip">
+            </div>
+            <div class="info card">
+                <h2>Info</h2>
+                <p>Kippenvlees is het vlees dat afkomstig is van de kip. Het is een van de meest gegeten vleessoorten
+                    ter wereld. Kip wordt als (onderdeel van een) maaltijd zoals lunch en diner gegeten. Vaak ook als
+                    specialiteit in een restaurant of tijdens feestdagen zoals Pasen en Kerstmis. Kippenvlees wordt, net
+                    als het vlees van ander gevogelte, witvlees genoemd. Dit in tegenstelling tot rood vlees van
+                    zoogdieren.
+
+                    Kippenvlees kan op veel manieren bereid worden als voedsel, bijvoorbeeld in de grill, op de
+                    barbecue, gebakken of gebraden met allerhande kruiden en wijn, maar ook wel gekookt voor in
+                    soep.</p>
+            </div>
+
+        </div>
+        <div class="prijzen card">
+            <h2>Prijzen</h2>
+            <ul>
+                <li>
+                    <a class="button"
+                       href="https://www.aldi.nl/producten/vlees-vis-vega/kip/kipdrumsticks-7691-1-0.article.html">
+                        Aldi: €3,99 per Kg
+                    </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://www.collectandgo.be/colruyt/nl/assortiment/verse-kippenpilons">
+                        Collect and Go: €2,25 per Kg
+                    </a>
+                </li>
+                <li><a class="button"
+                       href="https://www.renmans.be/nl/producten/gevogelte/kip/kippendijen">
+                    Renmans: €5,98 per Kg
+                </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://drive.carrefour.be/nl/Beenhouwerij/Gevogelte/Kip/Carrefour-Onderbouten-KKC/p/01612276">
+                        Carrefour: €7 per Kg
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
@@ -13,7 +91,8 @@ hier komt nog iets
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
                     src="../../images/footer/facebook.png" alt="facebook logo"></a>
             <a href="https://twitter.com/"> <img src="../../images/footer/twitter.png" alt="twitter logo"></a>
-            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo"> </a>
+            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo">
+            </a>
         </div>
         Gebroeders de Smetstraat 1, 9000 Gent
     </div>
@@ -42,6 +121,29 @@ hier komt nog iets
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify(selector) {
+        if (supports3DTransforms) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for (; i < len; i++) {
+                let node = nodes[i];
+
+                if (!node.className || !node.className.match(/roll/g)) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify('.navlink');
 </script>
 </body>
 </html>
