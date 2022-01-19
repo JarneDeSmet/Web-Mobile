@@ -1,0 +1,48 @@
+main{
+    margin: 1.5rem;
+}
+.titel {
+
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #303133;
+    border: black solid 1px;
+}
+
+.titel h1 {
+    color: #ffaa00;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 50%;
+    background-color: #303133;
+    border-radius: 10px;
+    border: black solid 1px;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px 3px #515151;
+}
+
+.card h2{
+    font-size: 1.6rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 1px #CE5937;
+}
+.tekst {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.card img {
+    width: 100%;
+}
