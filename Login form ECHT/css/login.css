@@ -1,15 +1,46 @@
+header {
+    background-color: #303133;
+    display: flex;
+    font-size: 1.9rem;
+
+}
+
+body {
+    color: #ffaa00;
+    background-color: #ffaa00;
+}
+
+
+
 .loginform {
     width: 20%;
     height: fit-content;
-    border: 2px solid grey;
+    border: 0.5rem   ;
+    background-color: #303133;
+    border-color: #000000;
+    border-style: solid;
+    margin: 2.5rem;
+    padding: 5rem;
+
 }
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem;
+
 }
 
 .passworddiv {
     margin-top: 10px;
+}
+.container {
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
 }
