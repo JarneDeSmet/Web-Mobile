@@ -11,6 +11,7 @@ $age = isset($_GET['age']) ? $_GET['age'] : false;
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../contact/style.css">
 </head>
 <body>
 <header>
