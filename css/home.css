@@ -105,7 +105,9 @@ iframe {
     padding: 0.4rem;
     border-radius: 10px;
 }
-
+.svg {
+    background-color: #333;
+}
 
 
 
