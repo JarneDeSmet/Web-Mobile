@@ -1,8 +1,6 @@
 
-
-
-iframe{
-   width: 600px;
+iframe {
+    width: 600px;
     height: 450px;
     border: 2px solid #303133;
     filter: drop-shadow(0.8rem 0.6rem 0.6rem rgba(48, 49, 51, 0.2));
@@ -19,48 +17,66 @@ iframe{
     font-weight: 350;
     line-height: 3rem;
 }
-section{
+
+section {
     margin-top: 10rem;
 }
-#sec1{
+
+#sec1 {
     display: flex;
 }
-#pics{
+
+#sec1 h2 {
+    margin-top: 5rem;
+
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+#pics {
     display: flex;
     justify-content: center;
     gap: 3rem;
     padding: 1rem 3rem 1rem 3rem;
     border-radius: 15px;
-margin-top: 2rem;
+    margin-top: 2rem;
     filter: drop-shadow(0.5rem 0.3rem 0.3rem rgba(48, 49, 51, 0.5));
 
 }
 
-#pics >img{
+#pics > img {
     transition: transform 0.4s;
-    border: rgba(48, 49, 51, 0.5) solid 2px ;
+    border: rgba(48, 49, 51, 0.5) solid 2px;
     max-width: 250px;
 }
-#pics >img:hover{
+
+#pics > img:hover {
     transform: scale(1.08);
 }
 
-footer{
+footer {
     margin-top: 10rem;
 }
-.sec3{
+
+.sec3 {
     display: flex;
     justify-content: center;
 }
-.center{
+
+.center {
     text-align: center;
 }
-.center>p{
+
+.center > p {
     margin-bottom: 3rem;
 }
-hr{
+
+hr {
     max-width: 50rem;
 }
+
 .buttonabus {
     color: #ffaa00;
     background-color: #303133;
