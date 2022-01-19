@@ -67,7 +67,7 @@ footer {
 }
 
 .svg {
-    width: 4rem;
+    width: 5rem;
     animation-name: top;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -100,10 +100,10 @@ footer {
         transform: rotate(0deg);
     }
     85% {
-        transform: rotate(7deg);
+        transform: rotate(8deg);
     }
     95% {
-        transform: rotate(-7deg);
+        transform: rotate(-8deg);
     }
     100% {
         transform: rotate(0deg);
