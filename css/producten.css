@@ -1,5 +1,8 @@
+main {
+    margin-top: 1.5rem;
+}
 
-.aanbod{
+.aanbod {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -10,11 +13,11 @@
 
 }
 
-.aanbod img{
+.aanbod img {
     max-width: 100%;
 }
 
-.aanbod li{
+.aanbod li {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -25,39 +28,42 @@
     border: black solid 1px;
 }
 
-.aanbod li:hover{
+.aanbod li:hover {
     transform: scale(1.1);
 }
 
-.aanbod h2{
-    color: #ffffff;
+.aanbod h2 {
     font-size: 1.6rem;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
     text-shadow: 2px 2px 1px #CE5937;
 }
-.titel h1{
+
+.titel h1 {
     color: #ffaa00;
 }
+
 .titel {
-    margin-top: 2rem;
     max-width: 80%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     background-color: #303133;
+    border: black solid 1px;
 }
-.wagyu{
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
+
+.wagyu {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
-html{
-    background-image: url("../img/product_background.jpg");
+
+html {
+    background-image: url("../images/producten/product_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-}
-
-.productimage{
-display: flex;
-    height: 100%;
 }

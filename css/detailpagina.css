@@ -1,0 +1,74 @@
+main {
+    margin: 1.5rem;
+}
+
+html {
+    background-image: url("../images/producten/product_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.titel {
+
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, .8);
+    border: black solid 1px;
+}
+
+.titel h1 {
+    color: #000000;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    max-width: 50%;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    border: black solid 1px;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px 3px #000000;
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 1px #CE5937;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.tekst {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.prijzen ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 0;
+
+}
+.prijzen li:hover {
+    transform: scale(1.1);
+}
+.prijzen li{
+    transition: transform 0.4s;
+}

@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="/icon/favicon-32x32.png">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0">
@@ -16,28 +15,25 @@
 
 <header>
     <div class="container">
-        <a href="./"><img src="logo.png" alt="logo van OdiseeEats" class="logo"></a>
+        <a href="./"><img src="images/header/logo.png" alt="logo van OdiseeEats" class="logo"></a>
         <nav>
             <ul>
                 <li>
-                    <a class="current" href="./">Home</a>
+                    <a class="current navlink" href="./">Home</a>
+                </li>
+                <li><a class="navlink" href="producten">Producten</a>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a class="navlink" href="./about">Over ons</a>
                 </li>
                 <li>
-                    <a href="./about">Over ons</a>
-                </li>
-                <li><a href="producten">Producten</a>
+                    <a class="navlink" href="contact">Contact</a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
 <main>
-    <div class="svg">
-        <img src="worstenfest.svg"alt="worstjes">
-    </div>
     <div id="login"> log in voor extra voordelen <a href=""> link naar log in?</a></div>
     <section id="section1">
         <div class="banner">
@@ -69,20 +65,20 @@
     </section>
 
 </main>
-
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
         <div id="socials">
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
-                    src="1200px-Facebook_f_logo_(2019).svg.png" alt="facebook logo"></a>
-            <a href="https://twitter.com/"> <img src="twitter.png" alt="twitter logo"></a>
-            <a href="https://www.instagram.com/"> <img src="instagram.png" alt="instagram logo"> </a>
+                    src="images/footer/facebook.png" alt="facebook logo"></a>
+            <a href="https://twitter.com/"> <img src="images/footer/twitter.png" alt="twitter logo"></a>
+            <a href="https://www.instagram.com/"> <img src="images/footer/instagram.png" alt="instagram logo"> </a>
         </div>
         Gebroeders de Smetstraat 1, 9000 Gent
     </div>
 
 </footer>
+
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
     //Get the button
@@ -107,6 +103,28 @@
         document.documentElement.scrollTop = 0;
     }
 </script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
 
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
+</script>
 </body>
 </html>
