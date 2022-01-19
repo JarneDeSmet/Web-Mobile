@@ -92,7 +92,14 @@ hr {
     background-color: #ffaa00;
     border: 2px solid #303133;
 }
-
-
-
-
+.lijst{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+}
+.eenheid{
+    flex: 0 0 18%;
+    position: left;
+    align-items: flex-start;
+}
