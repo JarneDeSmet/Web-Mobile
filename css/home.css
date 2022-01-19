@@ -44,7 +44,7 @@ body {
 
 #section1{
     height: 100vh;
-    background-image: url("../Black-Angus.jpg");
+    background-image: url("../images/home/section1.jpg");
     background-position: top;
     padding: 25%;
     background-size: cover;
@@ -58,7 +58,7 @@ body {
 .section2 {
     margin: 0 auto;
     padding: 70px 20rem 62px;
-    background-image: url("../section2.jpg");
+    background-image: url("../images/home/section2.jpg");
     background-size: cover;
     background-position: center right;
 }
@@ -84,7 +84,7 @@ body {
 .section3 {
     margin: 0 auto;
     padding: 70px 20rem 62px;
-    background-image: url("../section3.jpg");
+    background-image: url("../images/home/section3.jpg");
     background-size: cover;
     background-position: center right;
     display: flex;
