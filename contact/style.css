@@ -28,8 +28,13 @@ textarea {
 label,
 input[type=submit] {
     margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 input[type=submit] {
     padding: .5em 2em;
+}
+
+div{
+    margin-top: 2rem;
 }
 
