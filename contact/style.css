@@ -9,3 +9,13 @@ main {
     color: #000000;
    background-image: url("../images/producten/product_background.jpg");
 }
+
+input[type=text],
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 40rem;
+    padding: .75em;
+    border: 1px solid #666;
+    border-radius: .3rem;
+}
