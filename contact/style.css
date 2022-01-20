@@ -4,7 +4,7 @@
     color: #ffffff;
     border-radius: 3rem;
     padding: 3rem;
-    margin: 3rem;
+    margin: 5rem 3rem;
 }
 
 html {
@@ -28,7 +28,6 @@ textarea {
 label,
 input[type=submit] {
     margin-top: 3rem;
-    margin-bottom: 1rem;
 }
 input[type=submit] {
     padding: .5em 2em;
@@ -37,4 +36,6 @@ input[type=submit] {
 div{
     margin-top: 2rem;
 }
+footer{
 
+}
