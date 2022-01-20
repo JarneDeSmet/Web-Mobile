@@ -43,7 +43,6 @@ div {
     margin-top: 2rem;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
+footer{
+    margin-top: 20rem;
 }
