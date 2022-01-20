@@ -18,10 +18,10 @@
 
             <nav id="menu" class="horizontaal">
                 <ul>
-                    <li><a class="navlink roll" href="../"><span data-titel="Home">Home</span></a></li>
-                    <li><a class="navlink roll" href="../producten/"><span data-titel="Home">Producten</span></a></li>
-                    <li><a class="current navlink roll" href="../about/"><span data-titel="Home">Over ons</span></a></li>
-                    <li><a class="navlink roll" href="../contact/"><span data-titel="Home">Contact</span></a></li>
+                    <li><a class="navlink" href="../"><span data-titel="Home">Home</span></a></li>
+                    <li><a class="navlink" href="../producten/"><span data-titel="Home">Producten</span></a></li>
+                    <li><a class="current navlink" href="../about/"><span data-titel="Home">Over ons</span></a></li>
+                    <li><a class="navlink" href="../contact/"><span data-titel="Home">Contact</span></a></li>
                 </ul>
             </nav>
 
@@ -120,6 +120,29 @@
         document.documentElement.scrollTop = 0;
     }
 
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
 </script>
 
 </body>
