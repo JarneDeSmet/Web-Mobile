@@ -32,8 +32,9 @@
     </div>
 </header>
 <main class="container center">
+
     <h1>Lekkere recepten met vlees</h1>
-    <section class="lijst">
+    <div class="secret">
         <div class="video">
             <iframe class="filmpje" src="https://www.youtube.com/embed/mUGHuziW5ok" title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -109,7 +110,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
         </div>
-    </section>
+    </div>
 </main>
 
 <footer>
@@ -174,6 +175,23 @@
 
     linkify('.navlink');
 </script>
+<script>
+    let direction = 'horizontaal';
+
+    function change_menu() {
+        let elem = document.getElementById('menu');
+        if (direction === 'horizontaal') {
+            elem.classList.remove('horizontaal');
+            elem.classList.add('verticaal');
+            elem.classList.add('visible');
+            direction = '';
+        } else {
+            elem.classList.remove('verticaal');
+            elem.classList.remove('visible');
+            elem.classList.add('horizontaal');
+            direction = 'horizontaal';
+        }
+    }
+</script>
 </body>
-<script type="text/javascript" src="../js/site.js"></script>
 </html>

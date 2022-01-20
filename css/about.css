@@ -33,6 +33,7 @@ section {
 
 h1, h2 {
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
 #pics {
@@ -77,14 +78,16 @@ hr {
     max-width: 50rem;
 }
 
-.lijst{
+.lijst {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: flex-start;
 }
-.eenheid{
-    flex: 0 0 18%;
+
+
+.eenheid {
+    display: flex;
     position: center;
     align-items: flex-start;
 }
