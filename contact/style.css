@@ -6,6 +6,9 @@
     padding: 3rem;
     margin: 5rem 3rem;
 }
+footer{
+    margin-top: 10rem;
+}
 
 html {
     background-image: url("../images/producten/product_background.jpg");

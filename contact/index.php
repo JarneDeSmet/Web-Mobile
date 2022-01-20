@@ -99,12 +99,12 @@ if (isset($_POST['btnSubmit'])) {
 
         <div>
             <label for="name">Naam</label>
-            <input type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
+            <input placeholder="Balthazar Boma" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
             <span class="message error"><?php echo $msgName; ?></span>
         </div>
         <div>
             <label for="message">Boodschap</label>
-            <textarea name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
+            <textarea placeholder="Ik houd van vlees" name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
             <span class="message error"><?php echo $msgMessage; ?></span>
         </div>
 
