@@ -1,6 +1,7 @@
 .content {
-    text-align: center;
+    display: flex;
     background-color: #303133;
+    color: #ffffff;
     border-radius: 3rem;
     padding: 3rem;
     margin: 3rem;
@@ -23,5 +24,12 @@ textarea {
     padding: .75em;
     border: 1px solid #666;
     border-radius: .3rem;
+}
+label,
+input[type=submit] {
+    margin-top: 3rem;
+}
+input[type=submit] {
+    padding: .5em 2em;
 }
 
