@@ -92,7 +92,9 @@ if (isset($_POST['btnSubmit'])) {
         </nav>
     </div>
 </header>
-<main class="container">
+
+<main class="container ">
+    <div class="content">
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <h1>Contact</h1>
         <p class="message">Wenst u ons te contacteren ? Gelieve de contactform in te vullen.</p>
@@ -111,6 +113,7 @@ if (isset($_POST['btnSubmit'])) {
 
         <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
     </form>
+</div>
 </main>
 <footer>
     <div class="container">
