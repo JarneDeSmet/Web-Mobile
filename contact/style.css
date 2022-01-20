@@ -1,21 +1,15 @@
-main {
+.content {
     text-align: center;
-    background-color: #303133;
-    color: #ffffff;
+    background-color: #ffaa00;
     border-radius: 3rem;
     padding: 3rem;
     margin: 3rem;
-}body {
-    color: #000000;
-   background-image: url("../images/producten/product_background.jpg");
 }
 
-input[type=text],
-textarea {
-    display: block;
-    width: 100%;
-    max-width: 40rem;
-    padding: .75em;
-    border: 1px solid #666;
-    border-radius: .3rem;
+html {
+    background-image: url("../images/producten/product_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
