@@ -6,7 +6,8 @@
     padding: 3rem;
     margin: 5rem 3rem;
 }
-footer{
+
+footer {
     margin-top: 10rem;
 }
 
@@ -28,17 +29,21 @@ textarea {
     border: 1px solid #666;
     border-radius: .3rem;
 }
+
 label,
 input[type=submit] {
     margin-top: 3rem;
 }
+
 input[type=submit] {
     padding: .5em 2em;
 }
 
-div{
+div {
     margin-top: 2rem;
 }
-footer{
 
+footer {
+    position: fixed;
+    bottom: 0;
 }
