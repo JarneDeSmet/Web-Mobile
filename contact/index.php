@@ -95,25 +95,25 @@ if (isset($_POST['btnSubmit'])) {
 
 <main class="container ">
     <div class="content">
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <h1>Contact</h1>
-        <p class="message">Wenst u ons te contacteren ? Gelieve de contactform in te vullen.</p>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <h1>Contact</h1>
+            <p class="message">Wenst u ons te contacteren ? Gelieve de contactform in te vullen.</p>
 
-        <div>
-            <label for="name">Naam</label>
-            <input placeholder="Balthazar Boma" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
-            <span class="message error"><?php echo $msgName; ?></span>
-        </div>
-        <div>
-            <label for="message">Boodschap</label>
-            <textarea placeholder="Ik houd van vlees" name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
-            <span class="message error"><?php echo $msgMessage; ?></span>
-        </div>
+            <div>
+                <label for="name">Naam</label>
+                <input placeholder="Balthazar Boma" type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
+                <span class="message error"><?php echo $msgName; ?></span>
+            </div>
+            <div>
+                <label for="message">Boodschap</label>
+                <textarea placeholder="Ik houd van vlees" name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
+                <span class="message error"><?php echo $msgMessage; ?></span>
+            </div>
 
 
-        <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
-    </form>
-</div>
+            <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
+        </form>
+    </div>
 </main>
 <footer>
     <div class="container">

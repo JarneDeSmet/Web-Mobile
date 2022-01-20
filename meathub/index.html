@@ -16,16 +16,7 @@
     <div class="container">
         <a href="../"><img src="../images/header/logo.png" class="logo" alt="Logo"></a>
 
-<<<<<<< HEAD
-            <nav id="menu" class="horizontaal">
-                <ul>
-                    <li><a class="navlink" href="../"><span data-titel="Home">Home</span></a></li>
-                    <li><a class="navlink" href="../producten/"><span data-titel="Home">Producten</span></a></li>
-                    <li><a class="current navlink" href="../about/"><span data-titel="Home">Over ons</span></a></li>
-                    <li><a class="navlink" href="../contact/"><span data-titel="Home">Contact</span></a></li>
-                </ul>
-            </nav>
-=======
+
         <nav id="menu" class="horizontaal">
             <ul>
                 <li><a class="navlink " href="../"><span data-titel="Home">Home</span></a></li>
@@ -34,7 +25,6 @@
                 <li><a class="navlink " href="../contact/"><span data-titel="Home">Contact</span></a></li>
             </ul>
         </nav>
->>>>>>> d0154d3dd6c5ace8dd949ebc204ae5942187f9e5
 
         <div class="hamburger" onclick="change_menu()">
             <div class="icon-left"></div>
@@ -166,9 +156,9 @@
 <script>
     let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
         document.body.style['MozPerspective'] !== undefined;
-<<<<<<< HEAD
+    <<<<<<< HEAD
 
-    function linkify( selector ) {
+        function linkify( selector ) {
         if( supports3DTransforms ) {
 
             let nodes = document.querySelectorAll(selector);
@@ -190,24 +180,24 @@
 =======
 >>>>>>> d0154d3dd6c5ace8dd949ebc204ae5942187f9e5
 
-    function linkify(selector) {
-        if (supports3DTransforms) {
+function linkify(selector) {
+if (supports3DTransforms) {
 
-            let nodes = document.querySelectorAll(selector);
+let nodes = document.querySelectorAll(selector);
 
-            let i = 0, len = nodes.length;
-            for (; i < len; i++) {
-                let node = nodes[i];
+let i = 0, len = nodes.length;
+for (; i < len; i++) {
+let node = nodes[i];
 
-                if (!node.className || !node.className.match(/roll/g)) {
-                    node.className += ' roll';
-                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
-                }
-            }
-        }
-    }
+if (!node.className || !node.className.match(/roll/g)) {
+node.className += ' roll';
+node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+}
+}
+}
+}
 
-    linkify('.navlink');
+linkify('.navlink');
 </script>
 <script>
     let direction = 'horizontaal';

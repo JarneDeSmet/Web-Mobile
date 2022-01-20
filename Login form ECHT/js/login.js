@@ -1,6 +1,6 @@
 document.querySelector('.submit').addEventListener("click", function() {
     if ( document.querySelector('.password').value === 'Veggiesucks') {
-        location.href = 'index.html';
+        location.href = '../meathub/index.html';
     }
     else {
         alert("Inloggegevens onjuist");
