@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cordon bleu</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/detailpagina.css">
 </head>
+
 <body>
-hier komt nog iets
+<header>
+    <div class="container">
+        <a href="../../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navlink" href="../../">Home</a>
+                </li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
+                <li>
+                    <a class="navlink" href="../../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="../../contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="titel container">
+        <h1>Cordon bleu</h1>
+    </section>
+    <section class="product container">
+        <div class="tekst">
+            <div class="img card">
+                <img src="../../images/producten/cordonbleu.png" alt="Cordon bleu">
+            </div>
+            <div class="info card">
+                <h2>Info</h2>
+                <p>Een cordon bleu of schnitzel cordon bleu is een gepaneerd of ongepaneerd stuk kalfsvlees,
+                    kippenvlees, rundvlees of varkensvlees, gelijk aan een schnitzel, maar gevuld met ham en kaas. Als
+                    kaas wordt Emmentaler, Gruyère of Raclette gebruikt</p>
+            </div>
+
+        </div>
+        <div class="prijzen card">
+            <h2>Prijzen</h2>
+            <ul>
+                <li>
+                    <a class="button"
+                       href="https://www.aldi.be/nl/producten/assortiment/vlees/varkensvlees/cordon-bleu-1326-1-0.article.html">
+                        Aldi: €11,30 per Kg
+                    </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://www.collectandgo.be/colruyt/nl/assortiment/cordon-bleu-10194-p-1001">
+                        Collect and Go: €8,81 per Kg
+                    </a>
+                </li>
+                <li><a class="button"
+                       href="https://www.renmans.be/nl/producten/gepaneerd-vlees-en-gevogelte/varken/cordon-bleu">
+                    Renmans: €15,68 per Kg
+                </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://drive.carrefour.be/nl/Beenhouwerij/Bereidingen-vlees-%26-gevogelte/Andere-bereidingen/Carrefour-Cordon-Bleu-Gehakt-2-x-130-g/p/01617778?redirectdoteu=x&">
+                        Carrefour: €10,58 per Kg
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
@@ -13,7 +85,8 @@ hier komt nog iets
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
                     src="../../images/footer/facebook.png" alt="facebook logo"></a>
             <a href="https://twitter.com/"> <img src="../../images/footer/twitter.png" alt="twitter logo"></a>
-            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo"> </a>
+            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo">
+            </a>
         </div>
         Gebroeders de Smetstraat 1, 9000 Gent
     </div>
@@ -42,6 +115,29 @@ hier komt nog iets
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify(selector) {
+        if (supports3DTransforms) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for (; i < len; i++) {
+                let node = nodes[i];
+
+                if (!node.className || !node.className.match(/roll/g)) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify('.navlink');
 </script>
 </body>
 </html>

@@ -67,10 +67,12 @@ footer {
 }
 
 .svg {
-    width: 5rem;
+    width: 4rem;
     animation-name: top;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    margin-left: 2rem;
+    margin-top: 4.5rem;
 }
 
 #myBtn {
@@ -136,7 +138,6 @@ footer {
     animation-duration: 400ms;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
-    opacity: 1;
 }
 
 @keyframes animate-fade {

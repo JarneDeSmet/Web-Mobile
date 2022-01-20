@@ -83,7 +83,7 @@ if (isset($_POST['btnSubmit'])) {
                 <li><a class="navlink" href="../producten">Producten</a>
                 </li>
                 <li>
-                    <a  class=" navlink" href="../about">Over ons</a>
+                    <a class=" navlink" href="../about">Over ons</a>
                 </li>
                 <li>
                     <a class="navlink current" href="../contact">Contact</a>
@@ -92,38 +92,32 @@ if (isset($_POST['btnSubmit'])) {
         </nav>
     </div>
 </header>
-<main>
-    <div class="content">
+<main class="container">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <h1>Contact</h1>
+        <p class="message">Wenst u ons te contacteren ? Gelieve de contactfrom in te vullen.</p>
 
-    <main class="container">
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-    <h1>Contact</h1>
-    <p class="message">Wenst u ons te contactere ? Gelieve de contactfrom in te vullen.</p>
-
-    <div>
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" value="Vul hier je naam in" class="input-text"/>
-        <span class="message error"><?php echo $msgName; ?></span>
-    </div>
-    <div>
-        <label for="message">Boodschap</label>
-        <textarea name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
-        <span class="message error"><?php echo $msgMessage; ?></span>
-    </div>
+        <div>
+            <label for="name">Naam</label>
+            <input type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
+            <span class="message error"><?php echo $msgName; ?></span>
+        </div>
+        <div>
+            <label for="message">Boodschap</label>
+            <textarea name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
+            <span class="message error"><?php echo $msgMessage; ?></span>
+        </div>
 
 
-    <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
-     </form>
-    </main>
-</div>
-
+        <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
+    </form>
 </main>
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
         <div id="socials">
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
-                    src="../images/footer/facebook.png" alt="facebook logo"></a>
+                        src="../images/footer/facebook.png" alt="facebook logo"></a>
             <a href="https://twitter.com/"> <img src="../images/footer/twitter.png" alt="twitter logo"></a>
             <a href="https://www.instagram.com/"> <img src="../images/footer/instagram.png" alt="instagram logo"></a>
         </div>
@@ -159,24 +153,24 @@ if (isset($_POST['btnSubmit'])) {
     let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
         document.body.style['MozPerspective'] !== undefined;
 
-    function linkify( selector ) {
-        if( supports3DTransforms ) {
+    function linkify(selector) {
+        if (supports3DTransforms) {
 
             let nodes = document.querySelectorAll(selector);
 
             let i = 0, len = nodes.length;
-            for(; i < len; i++ ) {
+            for (; i < len; i++) {
                 let node = nodes[i];
 
-                if( !node.className || !node.className.match( /roll/g ) ) {
+                if (!node.className || !node.className.match(/roll/g)) {
                     node.className += ' roll';
-                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
                 }
             }
         }
     }
 
-    linkify( '.navlink' );
+    linkify('.navlink');
 </script>
 </body>
 </html>

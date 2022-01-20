@@ -1,0 +1,41 @@
+.content {
+    display: flex;
+    background-color: #303133;
+    color: #ffffff;
+    border-radius: 3rem;
+    padding: 3rem;
+    margin: 5rem 3rem;
+}
+
+html {
+    background-image: url("../images/producten/product_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+input[type=text],
+textarea {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 40rem;
+    padding: .75em;
+    border: 1px solid #666;
+    border-radius: .3rem;
+}
+label,
+input[type=submit] {
+    margin-top: 3rem;
+}
+input[type=submit] {
+    padding: .5em 2em;
+}
+
+div{
+    margin-top: 2rem;
+}
+footer{
+
+}

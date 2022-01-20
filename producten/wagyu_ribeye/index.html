@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>wagyu ribeye</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/detailpagina.css">
 </head>
+
 <body>
-hier komt nog iets
+<header>
+    <div class="container">
+        <a href="../../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navlink" href="../../">Home</a>
+                </li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
+                <li>
+                    <a class="navlink" href="../../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="../../contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="titel container">
+        <h1>Wagyu ribeye</h1>
+    </section>
+    <section class="product container">
+        <div class="tekst">
+            <div class="img card">
+                <img src="../../images/producten/wagyu_ribeye.jpg" alt="Wagyu ribeye steak">
+            </div>
+            <div class="info card">
+                <h2>Info</h2>
+                <p>Wagyu. Het is de absolute top in runderrassen en daarvan is Japanese Black dan weer het neusje van de
+                    zalm. Letterlijk vertaald betekent Wagyu Japanse koe (wa = Japan, Gyu = koe) en dat zegt eigenlijk
+                    wel genoeg. Tot voor kort mocht dit vlees uberhaupt niet worden geexporteerd, maar sinds kort kunnen
+                    we ook in Nederland genieten van dit bijzondere vlees. Beperkt, dat wel. Want Japanese black - ook
+                    wel bekend als Kagoshima Wagyu - eet je niet elke dag.
+
+                    Hoewel we het hier over superexclusief Wagyu vlees hebben, is niet iedereen (los van de prijs)
+                    enthousiast over dit intense vlees. Want de nootachtige smaak is intens en de structuur is zo zacht,
+                    dat je bijna vergeet dat je steak aan het eten bent.</p>
+            </div>
+
+        </div>
+        <div class="prijzen card">
+            <h2>Prijzen</h2>
+            <ul>
+                <li>
+                    <a class="button"
+                       href="https://butchery.be/japans-wagyu-ribeye-kagoshima-a5-bms12.html">
+                        Butchery.be: €279,95 per Kg
+                    </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://nl.osmeatshop.com/products/kagoshima-wagyu-a5-beef-ribeye-steak-1kg">
+                        Osmeatshop.com: €330 per Kg
+                    </a>
+                </li>
+                <li><a class="button"
+                       href="https://www.nicetomeatyou.nl/product/j-wagyu-ribeye-a5-steak-500gr/">
+                    Nicetomeatyou.nl: €460 per Kg
+                </a>
+                </li>
+                <li>
+                    <a class="button"
+                       href="https://www.bbquality.nl/product/wagyu-ribeye-a4-japans-full-blood/">
+                        Bbquality.nl: €160 per Kg
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        &copy; Copyright 2021, OdiseeEats
+        <div id="socials">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://jarnedesmet.github.io/Web-Mobile/"> <img
+                    src="../../images/footer/facebook.png" alt="facebook logo"></a>
+            <a href="https://twitter.com/"> <img src="../../images/footer/twitter.png" alt="twitter logo"></a>
+            <a href="https://www.instagram.com/"> <img src="../../images/footer/instagram.png" alt="instagram logo">
+            </a>
+        </div>
+        Gebroeders de Smetstraat 1, 9000 Gent
+    </div>
+
+</footer>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <script>
     //Get the button
@@ -29,6 +121,29 @@ hier komt nog iets
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify(selector) {
+        if (supports3DTransforms) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for (; i < len; i++) {
+                let node = nodes[i];
+
+                if (!node.className || !node.className.match(/roll/g)) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify('.navlink');
 </script>
 </body>
 </html>

@@ -33,6 +33,7 @@ section {
 
 h1, h2 {
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
 #pics {
@@ -77,29 +78,16 @@ hr {
     max-width: 50rem;
 }
 
-.buttonabus {
-    color: #ffaa00;
-    background-color: #303133;
-    text-decoration: none;
-    padding: 1rem;
-    border: 2px solid #ffaa00;
-    border-radius: 10px;
-    max-width: fit-content;
-}
-
-.buttonabus:hover {
-    color: #303133;
-    background-color: #ffaa00;
-    border: 2px solid #303133;
-}
-.lijst{
+.lijst {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: flex-start;
 }
-.eenheid{
-    flex: 0 0 18%;
+
+
+.eenheid {
+    display: flex;
     position: center;
     align-items: flex-start;
 }

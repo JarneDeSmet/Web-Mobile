@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hamburger</title>
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css/detailpagina.css">
 </head>
+
 <body>
-hier komt nog iets
+<header>
+    <div class="container">
+        <a href="../../"><img src="../../images/header/logo.png" alt="logo van odiseeEats" class="logo"></a>
+
+        <nav>
+            <ul>
+                <li>
+                    <a class="navlink" href="../../">Home</a>
+                </li>
+                <li><a class="current navlink" href="../../producten">Producten</a></li>
+                <li>
+                    <a class="navlink" href="../../about">Over ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="../../contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="titel container">
+        <h1>Hamburgers</h1>
+    </section>
+    <section class="product container">
+        <div class="tekst">
+            <div class="img card">
+                <img src="../../images/producten/hamburger.png" alt="Hamburger">
+            </div>
+            <div class="info card">
+                <h2>Info</h2>
+                <p>Een hamburger is een schijf gebakken of gegrild gemalen vlees (meestal rundergehakt). Vaak wordt 'hamburger' ook als pars pro toto gebruikt voor een broodje dat met deze schijf belegd is. Vaak worden hier sla, tomaat, ui, spek, ei, augurken en kaas aan toegevoegd en sauzen als mosterd, mayonaise, ketchup of chilisaus. Dit gerecht kent verschillende nationale en regionale varianten.
+            </div>
+
+        </div>
+        <div class="prijzen card">
+            <h2>Prijzen</h2>
+            <ul>
+                <li>
+                    <a class="button" href="https://www.aldi.be/nl/producten/assortiment/vlees/rundsvlees/rundshamburgers-1233-1-0.article.html">
+                        Aldi: €11,96 per Kg
+                    </a>
+                </li>
+                <li>
+                    <a class="button" href="https://www.collectandgo.be/colruyt/nl/assortiment/hamburgers-10085-p-1001">
+                        Collect and Go: €10,58 per Kg
+                    </a>
+                </li>
+                <li><a class="button" href="https://www.renmans.be/nl/producten/gehakt-worsten/bereidingen-op-basis-van-gehakt/hamburger-varken">
+                    Renmans: €12.98 per Kg
+                </a>
+                </li>
+                <li>
+                    <a class="button" href="https://drive.carrefour.be/nl/Beenhouwerij/Bereidingen-vlees-%26-gevogelte/Gehakt/Carrefour-Hamburgers-0-220-kg/p/01613580">
+                        Carrefour: €15,91 per Kg
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
 <footer>
     <div class="container">
         &copy; Copyright 2021, OdiseeEats
@@ -42,6 +108,29 @@ hier komt nog iets
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+</script>
+<script>
+    let supports3DTransforms = document.body.style['webkitPerspective'] !== undefined ||
+        document.body.style['MozPerspective'] !== undefined;
+
+    function linkify( selector ) {
+        if( supports3DTransforms ) {
+
+            let nodes = document.querySelectorAll(selector);
+
+            let i = 0, len = nodes.length;
+            for(; i < len; i++ ) {
+                let node = nodes[i];
+
+                if( !node.className || !node.className.match( /roll/g ) ) {
+                    node.className += ' roll';
+                    node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+                }
+            }
+        }
+    }
+
+    linkify( '.navlink' );
 </script>
 </body>
 </html>
