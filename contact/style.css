@@ -1,10 +1,11 @@
-.content {
+main {
     text-align: center;
-    background-color: #ffaa00;
+    background-color: #303133;
+    color: #ffffff;
     border-radius: 3rem;
     padding: 3rem;
     margin: 3rem;
 }body {
     color: #000000;
-    background-color: #ffaa00;
+   background-image: url("../images/producten/product_background.jpg");
 }
